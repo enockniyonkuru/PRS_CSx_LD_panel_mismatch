@@ -2,6 +2,8 @@
 
 Thank you for your interest in this project!
 
+**Project Contact**: enock.niyonkuru@ucsf.edu
+
 ## How to Report Issues
 
 Please open an issue on the repository with:
@@ -10,6 +12,8 @@ Please open an issue on the repository with:
 - Steps to reproduce
 - Expected vs. actual behavior
 - Your environment (Python version, OS, installed packages)
+
+Alternatively, email enock.niyonkuru@ucsf.edu with details.
 
 ## How to Contribute Code
 

@@ -256,9 +256,14 @@ This project is licensed under the MIT License—see `LICENSE` for details.
 
 ## Contact & Support
 
-- For issues with PRS-CSx methodology: https://github.com/getian107/PRScsx/issues
-- For PLINK-NG questions: https://www.cog-genomics.org/plink/2.0/
-- For questions about this specific analysis, open an issue or contact the author.
+**For questions about this analysis:**
+- Email: enock.niyonkuru@ucsf.edu
+- GitHub Issues: Open an issue in the repository
+
+**For external tool support:**
+- PRS-CSx methodology: https://github.com/getian107/PRScsx/issues
+- PLINK-NG questions: https://www.cog-genomics.org/plink/2.0/
+- PRS-CS questions: https://github.com/getian107/PRScs/issues
 
 ## Acknowledgments
 

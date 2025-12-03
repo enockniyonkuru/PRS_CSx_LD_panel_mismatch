@@ -266,5 +266,6 @@ find . -type f | wc -l
 
 **Your submission repository is complete and ready!** 🎓
 
-**Last Updated**: December 3, 2025
-**Repository Status**: Clean, tested, production-ready
+**Last Updated**: December 3, 2025  
+**Repository Status**: Clean, tested, production-ready  
+**Contact**: enock.niyonkuru@ucsf.edu for questions or support

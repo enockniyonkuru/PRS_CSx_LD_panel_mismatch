@@ -473,4 +473,5 @@ When publishing or presenting results, include:
 ---
 
 **Last Updated**: December 2025  
-**Tested with**: Python 3.8+, PLINK 2.0, pandas 2.0+, numpy 1.24+
+**Tested with**: Python 3.8+, PLINK 2.0, pandas 2.0+, numpy 1.24+  
+**Contact**: enock.niyonkuru@ucsf.edu for questions or assistance
