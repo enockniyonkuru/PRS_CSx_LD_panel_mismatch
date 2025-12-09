@@ -47,3 +47,7 @@ outputs/*.jpg
 .DS_Store
 Thumbs.db
 *.log
+
+# Dump folder
+dump/
+

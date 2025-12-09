@@ -56,53 +56,6 @@ This project builds on three publicly available tools:
 - **Citation**: Chang et al. (2015). GigaScience.
 - **Usage in this project**: Preparing genotype data, applying PRS weights to target cohort
 
-## Repository Structure
-
-```
-PRS_CSx_LD_panel_mismatch/
-├── README.md                          # This file
-├── REPRODUCIBILITY.md                 # Step-by-step commands to recreate analysis
-├── LICENSE                            # MIT License
-├── CONTRIBUTING.md                    # Contribution guidelines
-├── CHANGELOG.md                       # Version history
-├── requirements.txt                   # Python dependencies
-├── pyproject.toml                     # Project metadata
-├── Makefile                           # Convenience commands
-│
-├── scripts/                           # All analysis & visualization scripts
-│   ├── PRScsx.py                      # Main PRS-CSx implementation (copied from repo)
-│   ├── parse_genet.py                 # GWAS summary stat parsing
-│   ├── gigrnd.py                      # Inverse Gaussian random sampler
-│   ├── mcmc_gtb.py                    # MCMC Gibbs sampling
-│   │
-│   ├── run_model1_baseline.sh         # Model 1: Fully matched baseline
-│   ├── run_model2.py                  # Model 2: Single-ancestry mismatch
-│   ├── run_model3.py                  # Model 3: Partial multi-ancestry
-│   ├── run_model4.py                  # Model 4: AMR fallback
-│   ├── run_model5.py                  # Model 5: SAS fallback
-│   │
-│   ├── verify_model1_setup.py         # Validate model 1 configuration
-│   ├── run_phase3_scoring.py          # Phase 3: Apply weights to target cohort
-│   ├── run_phase4_analysis.py         # Phase 4: Compute R² and statistics
-│   ├── run_phase5_visualization.py    # Phase 5: Generate publication figure
-│   │
-│   └── generate_population_stratified_figure.py  # Clean figure generation utility
-│
-├── analysis/                          # Analysis outputs & results
-│   ├── model_output/                  # SNP weights (M1-M5 per chromosome)
-│   ├── r2_summaries/                  # R² estimates with bootstrap CIs
-│   └── statistical_tests/             # t-tests, effect sizes
-│
-├── docs/                              # Additional documentation
-│   ├── model_definitions.md           # Detailed model specifications
-│   ├── data_sources.md                # Input data descriptions
-│   └── statistical_methods.md         # Methods & formulas
-│
-└── data/                              # Sample/template data
-    ├── sample_results.csv             # Example output for figure generation
-    └── gwas_sumstat_template.txt      # GWAS summary stat format
-```
-
 ## Quick Start
 
 ### Prerequisites
@@ -126,8 +79,6 @@ pip install -r requirements.txt
 ```
 
 ### Running the Analysis
-
-**For a complete walkthrough with all commands, see `REPRODUCIBILITY.md`.**
 
 **Quick test with sample data:**
 
@@ -240,25 +191,14 @@ And PLINK-NG for genotype handling:
 
 > Chang, C. C., Chow, C. C., Tellier, L. C., Vattikuti, S., Purcell, S. M., & Lee, J. J. (2015). Second-generation PLINK: Rising to the challenge for larger and richer datasets. *GigaScience*, 4(1), 7. https://doi.org/10.1186/s13742-015-0047-8
 
-## Reproducibility
-
-For **step-by-step commands to fully reproduce this analysis**, see `REPRODUCIBILITY.md`.
-
-This includes:
-- Exact PLINK commands for genotype manipulation
-- PRScsx invocation parameters
-- Python command-line arguments
-- Expected file paths and outputs
-
 ## License
 
-This project is licensed under the MIT License—see `LICENSE` for details.
+This project is licensed under the MIT License.
 
 ## Contact & Support
 
 **For questions about this analysis:**
 - Email: enock.niyonkuru@ucsf.edu
-- GitHub Issues: Open an issue in the repository
 
 **For external tool support:**
 - PRS-CSx methodology: https://github.com/getian107/PRScsx/issues
