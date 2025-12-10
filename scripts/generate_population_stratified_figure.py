@@ -49,7 +49,7 @@ def panel_bar_with_ci(ax, df_pop: pd.DataFrame, title: str, color: str):
     # Error bars (95% CI)
     for i, row in enumerate(df_pop.sort_values("model").itertuples(index=False)):
         ax.errorbar(i, row.r2, yerr=[[row.r2 - row.r2_low], [row.r2_high - row.r2]], fmt="none", ecolor="black", capsize=3, linewidth=1)
-    ax.set_title(title)
+    ax.set_title(title, fontsize=12, fontweight='bold')
     ax.set_xlabel("Model")
     ax.set_ylabel("R²")
     ax.set_ylim(0, max(0.35, df_pop["r2_high"].max() + 0.05))
@@ -74,10 +74,8 @@ def panel_comparison(ax, df: pd.DataFrame):
 
 def panel_model_defs(ax):
     txt = "\n".join([f"{m}: {MODEL_DEFS[m]}" for m in ["M1","M2","M3","M4","M5"]])
-    ax.text(0.01, 0.99, dedent(f"""
-    D. Model definitions
-    {txt}
-    """), va="top", ha="left")
+    content = f"D. Model definitions\n\n{txt}"
+    ax.text(0.01, 0.99, content, va="top", ha="left")
     ax.axis("off")
 
 
@@ -91,11 +89,11 @@ def main():
 
     # Panel A: EUR
     df_eur = df[df["population"] == "EUR"].copy()
-    panel_bar_with_ci(axA, df_eur, "A. EUR performance (R² with 95% CI)", PALETTE["EUR"]) 
+    panel_bar_with_ci(axA, df_eur, "A. Target Population EUR", PALETTE["EUR"]) 
 
     # Panel B: EAS
     df_eas = df[df["population"] == "EAS"].copy()
-    panel_bar_with_ci(axB, df_eas, "B. EAS performance (R² with 95% CI)", PALETTE["EAS"]) 
+    panel_bar_with_ci(axB, df_eas, "B. Target Population EAS", PALETTE["EAS"]) 
 
     # Panel C: Comparison
     panel_comparison(axC, df)
